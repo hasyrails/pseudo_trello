@@ -18,3 +18,31 @@
  @import 'font-awesome-sprockets';
  @import 'font-awesome';
  @import 'top';
+ @import 'lists/new';
+
+ .submit-btn {
+   &-new-list {
+    background: #29b744;
+    color: #fff;
+    width: 200px;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 90px;
+    transition: opacity .5s;
+    &:hover {
+      opacity: .6;
+    }
+  }
+  &-edit-list {
+    background: greenyellow;
+    color:grey;
+    width: 200px;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 90px;
+    transition: opacity .5s;
+    &:hover {
+      opacity: .6;
+    }
+  }
+}

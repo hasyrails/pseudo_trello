@@ -1,0 +1,13 @@
+<div class="list-edit-page">
+  <div class="container">
+    <%= form_with model: @list, url: {action: :update}, html: { class: 'list-form-edit'}, local: true do |f| %>
+       <% if @list.errors.any? %>
+        <p class='text-danger'>タイトルは1〜255文字いないで入力してください</p>
+      <% end %>
+
+      <%= f.label :title %>
+      <%= f.text_field :title, class: 'form-control list-form-title', placeholder: 'リスト名' %>
+      <div class="text-center"><%= f.submit '編集する', class: 'submit-btn-edit-list btn rounded-pill' %></div>
+    <% end %>
+  </div>  
+</div>

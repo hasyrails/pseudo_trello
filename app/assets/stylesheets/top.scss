@@ -57,3 +57,46 @@ body {
     }
   }
 }
+ 
+// list
+
+.top-page {
+  min-height: 93vh;
+  padding-top: 30px;
+  background: #ffffdd;
+  overflow-x: scroll;
+  .list-wrapper{
+    display: flex;
+    height: 100%;
+    align-items: baseline;
+    .list {
+      position: relative;
+      background: #aaddaa;
+      padding: 10px;
+      margin-left: 20px;
+      min-width: 250px;
+      &:last-child{
+        margin-right: 20px;
+      }
+      &-header{
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &-title{
+          font-size: 20px;
+          margin: 0;
+        }
+        &-action {
+          .fa-pen, .fa-trash {
+            font-size: 18px;
+            color: blue;
+          }
+          .fa-trash {
+            margin-right: 10px;  
+          }
+        }
+      }
+    }
+  }
+}
