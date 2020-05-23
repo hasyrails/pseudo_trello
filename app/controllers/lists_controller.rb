@@ -25,6 +25,12 @@ class ListsController < ApplicationController
       render action: :edit
     end
   end
+  
+  def destroy
+    @list = List.find_by(id: params[:id])
+    @list.destroy
+    redirect_to :root
+  end
 
   private
 
