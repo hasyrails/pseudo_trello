@@ -57,3 +57,37 @@ body {
     }
   }
 }
+
+// list
+
+.top-page {
+  min-height: 93vh;
+  padding-top: 30px;
+  background: #bababa;
+  overflow-x: scroll;
+  .list-wrapper{
+    display: flex;
+    height: 100%;
+    align-items: baseline;
+    .list {
+      position: relative;
+      background: #e2e4e6;
+      padding: 10px;
+      margin-left: 20px;
+      min-width: 250px;
+      &:last-child{
+        margin-right: 20px;
+      }
+      &-header{
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &-title{
+          font-size: 20px;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
