@@ -57,13 +57,13 @@ body {
     }
   }
 }
-
+ 
 // list
 
 .top-page {
   min-height: 93vh;
   padding-top: 30px;
-  background: #bababa;
+  background: #ffffdd;
   overflow-x: scroll;
   .list-wrapper{
     display: flex;
@@ -71,7 +71,7 @@ body {
     align-items: baseline;
     .list {
       position: relative;
-      background: #e2e4e6;
+      background: #aaddaa;
       padding: 10px;
       margin-left: 20px;
       min-width: 250px;
@@ -86,6 +86,12 @@ body {
         &-title{
           font-size: 20px;
           margin: 0;
+        }
+        &-action {
+          .fa-pen, .fa-trash {
+            font-size: 18px;
+            color: blue;
+          }
         }
       }
     }
