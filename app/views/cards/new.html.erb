@@ -1,0 +1,19 @@
+<div class="card-new-page">
+  <div class="container">
+    <%= form_with model: @card, url: { action: :create }, html: { class: 'card-new-form' }, local: true do |f| %>
+     <%= f.hidden_field :list_id, value: @list.id %>
+      <% if @card.errors.any? %>
+        <p class='text-danger'>タイトルは1〜255文字以内で入力してください</p>
+      <% end %>
+      <div class="card-new-form-title">
+        <%= f.label :title %>
+        <%= f.text_field :title, class: 'form-control card-form-title', placeholder: 'カード名' %>
+      </div>
+      <div class="card-new-form-memo">
+        <%= f.label :memo %>
+        <%= f.text_area :memo, class: 'form-control card-form-memo', placeholder: '詳細' %>
+      </div>
+      <div class="text-center"><%= f.submit '作成する', class: 'submit-btn-new-list btn btn-success rounded-pill' %></div>
+    <% end  %>
+  </div>
+</div>
