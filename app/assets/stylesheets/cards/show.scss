@@ -1,0 +1,15 @@
+.card-show-page {
+  .card-contents {
+    margin: 60px auto 0;
+    max-width: 600px;
+    &-title {
+      h2 {
+        font-size: 22px;
+      }
+    }
+    &-title, &-memo, &-list-status{
+      border-bottom:1px solid #ccc ;
+      margin-bottom: 30px;
+    }
+  }
+}
