@@ -12,6 +12,10 @@
         <%= f.label :memo %>
         <%= f.text_area :memo, class: 'form-control card-form-memo', placeholder: '詳細' %>
       </div>
+      <div class="card-edit-form-memo">
+        <label>リスト名</label>
+        <%= select :card, :list_id, @lists.map{ |l| [l.title, l.id]},{}, { class: 'form-control'} %>
+      </div>
       <div class="text-center"><%= f.submit '作成する', class: 'submit-btn-edit-list btn btn-success rounded-pill' %></div>
     <% end %>
   </div>

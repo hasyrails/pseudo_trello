@@ -21,6 +21,7 @@ class CardsController < ApplicationController
 
   def edit
     @card = Card.find_by(id: params[:id])
+    @lists = List.where(user: current_user)
   end
 
   def update
