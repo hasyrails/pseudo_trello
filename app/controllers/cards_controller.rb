@@ -15,6 +15,29 @@ class CardsController < ApplicationController
     end
   end
 
+  def show
+    @card = Card.find_by(id: params[:id])
+  end
+
+  def edit
+    @card = Card.find_by(id: params[:id])
+  end
+
+  def update
+    @card = Card.find_by(id: params[:id])
+    if @card.update_attributes(card_params)
+      redirect_to :root
+    else
+      render action: :edit
+    end
+  end
+  
+  def destroy
+    @card = Card.find_by(id: params[:id])
+    @card.destroy
+    redirect_to :root
+  end
+
   private
 
   def card_params
