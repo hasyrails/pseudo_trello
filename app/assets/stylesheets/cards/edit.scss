@@ -1,0 +1,9 @@
+.card-edit-page {
+  .card-edit-form {
+    max-width: 500px;
+    margin: 70px auto 0;
+    &-title, &-memo {
+      margin-bottom: 30px;
+    }
+  }
+}
