@@ -97,6 +97,33 @@ body {
           }
         }
       }
+      .card-wrapper {
+        overflow-y: scroll;
+        max-height: 76vh;
+        .card{
+          margin-bottom: 10px;
+          padding: 10px;
+          &-title {
+            font-size: 17px;
+          }
+          &-detail {
+            display: none;
+            &.is-exist{
+              display: block;
+              color: #999;
+              & > i {
+                display: block;
+              }
+            }
+          }
+        }
+        .add-card {
+          color: #8c8c8c;
+          &-link {
+            color: #8c8c8c;
+          }
+        }
+      }
     }
   }
 }
