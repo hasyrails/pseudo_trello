@@ -1,0 +1,51 @@
+.new-user-page {
+  margin-top: 10vh;
+  .title-area {
+    text-align: center;
+    h1{
+      font-size: 2rem;
+    }
+  }
+  .user-new-form {
+    .form-group {
+      margin: 0 auto 1.5rem auto;
+      max-width: 500px;
+      display: flex;
+      .form-icon{
+        &-name{
+          margin-right: 14px;
+        }
+        &-email{
+          margin-right: 10px;
+        }
+        &-password {
+          margin-right: 10px;
+          margin-bottom: 2px;
+        }
+        &-password_confirmation {
+          margin-right: 10px;
+          margin-bottom: 2px;
+        }
+      }
+      .form-control{
+        background: #f6f8df;
+      }
+    }
+  }
+  .login-btn {
+    background: #29b744;
+    color: #fff;
+    width: 200px;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 90px;
+    transition: opacity .5s;
+    &:hover {
+      opacity: .6;
+      }
+    }
+  .link-to-login-page {
+    display: block;
+    margin: 50px;
+  }
+  }
