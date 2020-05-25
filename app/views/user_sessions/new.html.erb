@@ -1,5 +1,12 @@
-<h1>login</h1>
+<div class="login-page">
+  <div class="title-area">
+    <h1>ログイン</h1>
+  </div>
+  <div class="container">
+    <%= render 'form' %>
 
-<%= render 'form' %>
-
-<%= link_to 'Back', user_sessions_path %>
+    <div class="text-center">
+      <%= link_to 'アカウントを新規作成する', new_user_path, class: 'link-to-new-user-page' %>
+    </div>
+  </div>
+</div>

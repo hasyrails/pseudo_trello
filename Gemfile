@@ -67,6 +67,7 @@ gem 'jquery-rails'
 
 # font-awesome-sassの導入
 gem 'font-awesome-sass'
+gem 'font-awesome-rails'
 
 # ユーザー認証機能
 gem 'sorcery'

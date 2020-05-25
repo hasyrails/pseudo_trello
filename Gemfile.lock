@@ -85,6 +85,8 @@ GEM
     faraday (1.0.1)
       multipart-post (>= 1.2, < 3)
     ffi (1.12.2)
+    font-awesome-rails (4.7.0.5)
+      railties (>= 3.2, < 6.1)
     font-awesome-sass (5.9.0)
       sassc (>= 1.11)
     globalid (0.4.2)
@@ -235,6 +237,7 @@ DEPENDENCIES
   capybara (>= 2.15)
   chromedriver-helper
   coffee-rails (~> 4.2)
+  font-awesome-rails
   font-awesome-sass
   jbuilder (~> 2.5)
   jquery-rails
