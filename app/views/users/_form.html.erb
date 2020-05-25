@@ -1,5 +1,5 @@
-<%= form_with(model: user, local: true) do |form| %>
-  <% if user.errors.any? %>
+<%= form_with(model: user, html: {class: 'mt-5, user-new-form'}, local: true) do |form| %>
+  <% if @user.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
 
@@ -10,32 +10,33 @@
       </ul>
     </div>
   <% end %>
+  
+  <%# sorceryのデフォルトでは
+  :email, :crypted_password, :salt の入力フォーム
+  → :name, :email, :password, :password_confirmation に変更 %>
 
-<%# sorceryのデフォルトでは
-    :email, :crypted_password, :salt の入力フォーム
-    → :name, :email, :password, :password_confirmation に変更 %>
-
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+  <div class="form-group">
+    <%= fa_icon "user-o 2x", class: 'form-icon-name' %>
+    <%= form.text_field :name, class: 'form-control', placeholder: 'アカウント名' %>
   </div>
 
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email %>
+  <div class="form-group">
+    <%= fa_icon "envelope-o 2x", class: 'form-icon-email' %>
+    <%= form.text_field :email, class: 'form-control', placeholder: 'メールアドレス' %>
   </div>
 
-  <div class="field">
-    <%= form.label :password %>
-    <%= form.text_field :password %>
+  <div class="form-group">
+    <%= fa_icon "lock 3x", class: 'form-icon-password' %>
+    <%= form.text_field :password, class: 'form-control', placeholder: 'パスワード' %>
   </div>
 
-  <div class="field">
-    <%= form.label :pssword_confirmation %>
-    <%= form.text_field :password_confirmation %>
+  <div class="form-group">
+    <%= fa_icon "lock 3x", class: 'form-icon-password_confirmation' %>
+    <%= form.text_field :password_confirmation, class: 'form-control', placeholder: 'パスワード確認' %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="text-center">
+    <%= form.submit 'アカウントを新規作成', class: 'btn btn-primary login-btn'%>
   </div>
+
 <% end %>
