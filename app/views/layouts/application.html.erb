@@ -11,7 +11,11 @@
 
   <body>
 
-    <%= render 'partial/header' %>
+    <% if current_user.present? %>
+      <%= render 'partial/login_header' %>
+    <% else %>
+      <%= render 'partial/logout_header' %>
+    <% end %>
 
     <%= yield %>
 
