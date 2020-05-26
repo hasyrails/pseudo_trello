@@ -14,9 +14,10 @@ class UserSessionsController < ApplicationController
       render 'user_sessions/new'
     end
   end
-
+  
   def destroy
     logout
-    redirect_to root_path, notice: 'logout'
+    flash[:notice] = 'ログアウトしました'
+    redirect_to root_path
   end
 end
