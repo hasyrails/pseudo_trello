@@ -11,13 +11,21 @@
 
   <body>
 
-    <% if current_user.present? %>
-      <%= render 'partial/login_header' %>
-    <% else %>
-      <%= render 'partial/logout_header' %>
-    <% end %>
+    <header>
+      <% if current_user.present? %>
+        <%= render 'partial/login_header' %>
+      <% else %>
+        <%= render 'partial/logout_header' %>
+      <% end %>
+    </header>
 
-    <%= yield %>
+    <div>
+      <%= render 'layouts/flash_messages' %>
+    </div>
+
+    <div class="contents">
+      <%= yield %>
+    </div>
 
   </body>
 </html>

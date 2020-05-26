@@ -2,14 +2,17 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+html{
+  height: 100%;
+}
 body {
-  overflow: visible;
+  height: 100%;
 }
 
-.notice,
-.alert {
-  display: none;
-}
+// .notice,
+// .alert {
+//   display: none;
+// }
 
 // header
 .header {
@@ -59,72 +62,75 @@ body {
 }
  
 // list
-
-.top-page {
-  min-height: 93vh;
-  padding-top: 30px;
-  background: #ffffdd;
-  overflow-x: scroll;
-  .list-wrapper{
-    display: flex;
-    height: 100%;
-    align-items: baseline;
-    .list {
-      position: relative;
-      background: #aaddaa;
-      padding: 10px;
-      margin-left: 20px;
-      min-width: 250px;
-      &:last-child{
-        margin-right: 20px;
-      }
-      &-header{
-        margin-bottom: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        &-title{
-          font-size: 30px;
-          margin: 0;
+.contents{
+  margin-top:   0px;
+  .top-page {
+    min-height: 93vh;
+    padding-top: 30px;
+    background: #ffffdd;
+    // overflow-x: scroll;
+    .list-wrapper{
+      display: flex;
+      height: 100%;
+      align-items: baseline;
+      .list {
+        position: relative;
+        background: #aaddaa;
+        padding: 10px;
+        margin-left: 20px;
+        min-width: 250px;
+        border-radius: 10px;
+        &:last-child{
+          margin-right: 20px;
         }
-        &-action {
-          .fa-pen, .fa-trash {
-            font-size: 18px;
-            color: blue;
+        &-header{
+          margin-bottom: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          &-title{
+            font-size: 30px;
+            margin: 0;
           }
-          .fa-trash {
-            margin-right: 10px;  
-          }
-        }
-      }
-      .card-wrapper {
-        overflow-y: scroll;
-        max-height: 76vh;
-        .card-show-link {
-          text-decoration: none;
-          color: #323232;
-        }
-        .card{
-          margin-bottom: 10px;
-          padding: 10px;
-          &-title {
-            font-size: 17px;
-          }
-          &-detail {
-            display: none;
-            &.is-exist{
-              display: block;
-              color: #999;
-              & > i {
-                display: block;
-              }
+          &-action {
+            .fa-pen, .fa-trash {
+              font-size: 18px;
+              color: blue;
+            }
+            .fa-trash {
+              margin-right: 10px;  
             }
           }
         }
-        .add-card {
-          color: #8c8c8c;
-          &-link {
+        .card-wrapper {
+          // overflow-y: scroll;
+          max-height: 76vh;
+          .card-show-link {
+            text-decoration: none;
+            color: #323232;
+          }
+          .card{
+            margin-bottom: 10px;
+            padding: 10px;
+            &-title {
+              font-size: 17px;
+            }
+            &-detail {
+              display: none;
+              &.is-exist{
+                display: block;
+                color: #999;
+                & > i {
+                  display: block;
+                }
+              }
+            }
+          }
+          .add-card {
             color: #8c8c8c;
+            &-link {
+              color: #8c8c8c;
+            }
           }
         }
       }

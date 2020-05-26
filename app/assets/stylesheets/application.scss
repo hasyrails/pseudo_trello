@@ -52,3 +52,15 @@
     }
   }
 }
+
+.flash-message {
+  color: white;
+  font-size: 1.1rem;
+  text-align: center;
+  .notice {
+    background-color: lightblue;
+  }
+  .danger {
+    background-color: #e89292;
+  }
+}
