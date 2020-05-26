@@ -54,13 +54,16 @@
 }
 
 .flash-message {
-  color: white;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   text-align: center;
   .notice {
     background-color: lightblue;
+    color:blue;
+    font-weight: bold;
   }
   .danger {
-    background-color: #e89292;
+    background-color: #fce8e8;
+    color: #f78b8b;
+    font-weight: bold;
   }
 }
