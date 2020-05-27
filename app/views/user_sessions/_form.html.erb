@@ -1,5 +1,7 @@
 <%= form_with url: login_path, html: {class: 'mt-5, login-form'}, local: true do |form| %>
 
+  <%= render 'partial/error_messages', object: form.object %>
+
   <div class="form-group">
     <%= fa_icon "envelope-o 2x", class: 'form-icon-email' %>
     <%= form.text_field :email, class: 'form-control', placeholder: 'メールアドレス' %>

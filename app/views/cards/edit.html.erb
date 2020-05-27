@@ -1,9 +1,9 @@
 <div class="card-edit-page">
   <div class="container">
     <%= form_with model: @card, url: {action: :update}, html: {class:'card-edit-form'}, local: true do |f| %>
-      <% if @card.errors.any? %>
-        <p class='text-danger'>タイトルは1〜255文字以内で入力してください</p>
-      <% end %>
+
+      <%= render 'partial/error_messages', object: f.object %>
+
       <div class="card-edit-form-title">
         <%= f.label :title %>
         <%= f.text_field :title, class: 'form-control card-form-title', placeholder: 'カード名' %>
@@ -14,7 +14,7 @@
       </div>
       <div class="card-edit-form-memo">
         <label>リスト名</label>
-        <%= select :card, :list_id, @lists.map{ |l| [l.title, l.id]},{}, { class: 'form-control'} %>
+          <%= select :card, :list_id, @lists.map{ |l| [l.title, l.id]},{}, { class: 'form-control'} %>
       </div>
       <div class="text-center"><%= f.submit '作成する', class: 'submit-btn-edit-list btn btn-success rounded-pill' %></div>
     <% end %>
