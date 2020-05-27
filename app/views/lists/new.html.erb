@@ -1,11 +1,10 @@
 <div class="new-list-page">
   <div class="container">
     <%= form_with model: @list, url: {action: :create}, class: 'new-list-form', local: true do |f| %>
-      <% if @list.errors.any? %>
-        <p class='text-danger'>タイトルは1〜255文字いないで入力してください</p>
-      <% end %>
 
-      <%= f.label :title %>
+      <%= render 'partial/error_messages', object: f.object %>
+
+      <%= f.label t('lists.new.title') %>
       <%= f.text_field :title, class: 'form-control list-form-title', placeholder: 'リスト名' %>
       <div class="text-center"><%= f.submit '作成', class: 'submit-btn-new-list btn btn-success rounded-pill' %></div>
     <% end %>

@@ -23,13 +23,14 @@ class CardsController < ApplicationController
     @card = Card.find_by(id: params[:id])
     @lists = List.where(user: current_user)
   end
-
+  
   def update
     @card = Card.find_by(id: params[:id])
+    @lists = List.where(user: current_user)
     if @card.update_attributes(card_params)
       redirect_to :root
     else
-      render action: :edit
+      render 'cards/edit'
     end
   end
   

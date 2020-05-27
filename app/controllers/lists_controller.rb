@@ -1,5 +1,9 @@
 class ListsController < ApplicationController
 
+  def index
+    render 'lists/new'
+  end
+
   def new
     @list = List.new
   end
@@ -9,7 +13,7 @@ class ListsController < ApplicationController
     if @list.save
       redirect_to :root
     else
-      render action :new
+      render 'lists/new'
     end
   end
 
@@ -35,6 +39,6 @@ class ListsController < ApplicationController
   private
 
   def list_params
-    params.require(:list).permit(:title).merge(user: current_user)
+    params.permit(:title).merge(user: current_user)
   end
 end

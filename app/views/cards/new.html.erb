@@ -1,10 +1,9 @@
 <div class="card-new-page">
   <div class="container">
     <%= form_with model: @card, url: { action: :create }, html: { class: 'card-new-form' }, local: true do |f| %>
-     <%= f.hidden_field :list_id, value: @list.id %>
-      <% if @card.errors.any? %>
-        <p class='text-danger'>タイトルは1〜255文字以内で入力してください</p>
-      <% end %>
+
+      <%= render 'partial/error_messages', object: f.object %>
+
       <div class="card-new-form-title">
         <%= f.label :title %>
         <%= f.text_field :title, class: 'form-control card-form-title', placeholder: 'カード名' %>
